@@ -10,16 +10,15 @@
         </ul>
         <div class="pt-5 grid grid-cols-1 lg:grid-cols-2 gap-6">
             <!-- Card 1 -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Card 1</h5>
+            <Panel title="Card 1">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code1')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5 flex items-center justify-center">
                     <div
                         class="max-w-[19rem] w-full bg-white shadow-[4px_6px_10px_-3px_#bfc9d4] rounded border border-[#e0e6ed] dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none"
@@ -50,18 +49,17 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
             <!-- Card 2 -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Card 2</h5>
+            <Panel title="Card 2">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code2')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5 flex items-center justify-center">
                     <div
                         class="max-w-[19rem] w-full bg-white shadow-[4px_6px_10px_-3px_#bfc9d4] rounded border border-[#e0e6ed] dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none"
@@ -94,18 +92,17 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
             <!-- Card 3 -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Card 3</h5>
+            <Panel title="Card 3">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code3')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5 flex items-center justify-center">
                     <div
                         class="max-w-[18rem] w-full bg-[#3b3f5c] shadow-[4px_6px_10px_-3px_#bfc9d4] rounded border border-[#e0e6ed] dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none p-5"
@@ -154,18 +151,17 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
             <!-- Card 4 -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Card 4</h5>
+            <Panel title="Card 4">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code4')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5 flex items-center justify-center">
                     <div
                         class="max-w-[30rem] w-full bg-white shadow-[4px_6px_10px_-3px_#bfc9d4] rounded border border-[#e0e6ed] dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none"
@@ -207,18 +203,17 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
             <!-- Card 5 -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Card 5</h5>
+            <Panel title="Card 5">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code5')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5 flex items-center justify-center">
                     <div
                         class="max-w-[20rem] w-full bg-secondary shadow-[4px_6px_10px_-3px_#bfc9d4] rounded border border-[#e0e6ed] dark:border-0 dark:bg-secondary-dark-light dark:shadow-none p-5"
@@ -261,19 +256,18 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
 
             <!-- Card 6 -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Card 6</h5>
+            <Panel title="Card 6">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code6')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5 flex items-center justify-center">
                     <div
                         class="max-w-[20rem] w-full bg-white shadow-[4px_6px_10px_-3px_#bfc9d4] rounded border border-[#e0e6ed] dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none p-5"
@@ -324,18 +318,17 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
             <!-- Card 7 -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Card 7</h5>
+            <Panel title="Card 7">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code7')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5 flex items-center justify-center">
                     <div
                         class="max-w-[20rem] w-full bg-primary shadow-[4px_6px_10px_-3px_#bfc9d4] rounded border border-[#e0e6ed] dark:border-0 dark:bg-primary-dark-light dark:shadow-none p-5"
@@ -376,18 +369,17 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
             <!-- Card 8 -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Card 8</h5>
+            <Panel title="Card 8">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code8')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5 flex items-center justify-center">
                     <div
                         class="max-w-[24rem] w-full bg-white shadow-[4px_6px_10px_-3px_#bfc9d4] rounded border border-[#e0e6ed] dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none p-5"
@@ -463,18 +455,17 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
             <!-- Card 9 -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Card 9</h5>
+            <Panel title="Card 9">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code9')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5 flex items-center justify-center">
                     <div
                         class="max-w-[22rem] w-full bg-white shadow-[4px_6px_10px_-3px_#bfc9d4] rounded border border-[#e0e6ed] dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none"
@@ -555,12 +546,13 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
         </div>
     </div>
 </template>
 <script lang="ts" setup>
     import highlight from '@/components/plugins/highlight.vue';
+    import Panel from '@/components/Panel.vue';
     import codePreview from '@/composables/codePreview';
     import { useMeta } from '@/composables/use-meta';
 
