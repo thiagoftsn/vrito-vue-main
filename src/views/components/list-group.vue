@@ -120,37 +120,7 @@
                     </a>
                 </template>
                 <div class="mb-5">
-                    <div class="flex flex-col rounded-md border border-[#e0e6ed] dark:border-[#1b2e4b]">
-                        <div class="flex border-b border-[#e0e6ed] dark:border-[#1b2e4b] px-4 py-2.5 hover:bg-[#eee] dark:hover:bg-[#eee]/10">
-                            <div class="ltr:mr-2 rtl:ml-2.5 mt-0.5 text-primary">
-                                <icon-mail class="w-5 h-5" />
-                            </div>
-                            <div class="flex-1 font-semibold">
-                                <h6 class="mb-1 text-base">Messages</h6>
-                                <p class="text-xs">4 New Messages</p>
-                            </div>
-                        </div>
-                        <div
-                            class="flex border-b border-[#e0e6ed] dark:border-[#1b2e4b] px-4 py-2.5 bg-primary text-white shadow-[0_1px_15px_1px_rgba(67,97,238,0.15)] hover:bg-[#eee] dark:hover:bg-[#eee]/10 hover:text-black dark:hover:text-white group"
-                        >
-                            <div class="ltr:mr-2 rtl:ml-2.5 mt-0.5 text-white group-hover:text-primary">
-                                <icon-map-pin />
-                            </div>
-                            <div class="flex-1 font-semibold">
-                                <h6 class="mb-1 text-base">Locations</h6>
-                                <p class="text-xs">25 New Travel Locations</p>
-                            </div>
-                        </div>
-                        <div class="flex px-4 py-2.5 hover:bg-[#eee] dark:hover:bg-[#eee]/10">
-                            <div class="ltr:mr-2 rtl:ml-2.5 mt-0.5 text-primary">
-                                <icon-droplet />
-                            </div>
-                            <div class="flex-1 font-semibold">
-                                <h6 class="mb-1 text-base">Flexible</h6>
-                                <p class="text-xs">Customization Flexibility</p>
-                            </div>
-                        </div>
-                    </div>
+                    <ListGroup :items="iconsListItems" icon-class="w-5 h-5" />
                 </div>
                 <template v-if="codeArr.includes('code3')">
                     <highlight>
@@ -217,37 +187,7 @@
                     </a>
                 </template>
                 <div class="mb-5">
-                    <div class="flex flex-col rounded-md border border-[#e0e6ed] dark:border-[#1b2e4b]">
-                        <div class="flex border-b border-[#e0e6ed] dark:border-[#1b2e4b] px-4 py-2.5 hover:bg-[#eee] dark:hover:bg-[#eee]/10">
-                            <div class="ltr:mr-3 rtl:ml-3">
-                                <img src="/assets/images/profile-1.jpeg" alt="" class="rounded-full w-12 h-12 object-cover" />
-                            </div>
-                            <div class="flex-1 font-semibold">
-                                <h6 class="mb-1 text-base">Luke Ivory</h6>
-                                <p class="text-xs">Project Lead</p>
-                            </div>
-                        </div>
-                        <div
-                            class="flex border-b border-[#e0e6ed] dark:border-[#1b2e4b] px-4 py-2.5 bg-primary text-white shadow-[0_1px_15px_1px_rgba(67,97,238,0.15)] hover:bg-[#eee] dark:hover:bg-[#eee]/10 hover:text-black dark:hover:text-white group"
-                        >
-                            <div class="ltr:mr-3 rtl:ml-3">
-                                <img src="/assets/images/profile-2.jpeg" alt="" class="rounded-full w-12 h-12 object-cover" />
-                            </div>
-                            <div class="flex-1 font-semibold">
-                                <h6 class="mb-1 text-base">Sonia Shaw</h6>
-                                <p class="text-xs">Web Designer</p>
-                            </div>
-                        </div>
-                        <div class="flex px-4 py-2.5 hover:bg-[#eee] dark:hover:bg-[#eee]/10">
-                            <div class="ltr:mr-3 rtl:ml-3">
-                                <img src="/assets/images/profile-3.jpeg" alt="" class="rounded-full w-12 h-12 object-cover" />
-                            </div>
-                            <div class="flex-1 font-semibold">
-                                <h6 class="mb-1 text-base">Dale Butler</h6>
-                                <p class="text-xs">Developer</p>
-                            </div>
-                        </div>
-                    </div>
+                    <ListGroup :items="imagesListItems" />
                 </div>
                 <template v-if="codeArr.includes('code4')">
                     <highlight>
@@ -395,6 +335,7 @@
 <script lang="ts" setup>
     import highlight from '@/components/plugins/highlight.vue';
     import Panel from '@/components/Panel.vue';
+    import ListGroup from '@/components/ListGroup.vue';
     import codePreview from '@/composables/codePreview';
     import { useMeta } from '@/composables/use-meta';
 
@@ -405,4 +346,18 @@
 
     useMeta({ title: 'List Group' });
     const { codeArr, toggleCode } = codePreview();
+
+    // Icons list data
+    const iconsListItems = [
+        { title: 'Messages', description: '4 New Messages', icon: IconMail },
+        { title: 'Locations', description: '25 New Travel Locations', icon: IconMapPin, active: true },
+        { title: 'Flexible', description: 'Customization Flexibility', icon: IconDroplet },
+    ];
+
+    // Images list data
+    const imagesListItems = [
+        { title: 'Luke Ivory', subtitle: 'Project Lead', image: '/assets/images/profile-1.jpeg' },
+        { title: 'Sonia Shaw', subtitle: 'Web Designer', image: '/assets/images/profile-2.jpeg', active: true },
+        { title: 'Dale Butler', subtitle: 'Developer', image: '/assets/images/profile-3.jpeg' },
+    ];
 </script>
