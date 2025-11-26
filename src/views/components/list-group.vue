@@ -10,16 +10,15 @@
         </ul>
         <div class="pt-5 grid grid-cols-1 lg:grid-cols-2 gap-6">
             <!-- Basic -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Basic</h5>
+            <Panel title="Basic">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code1')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5">
                     <div class="flex flex-col rounded-md border border-[#e0e6ed] dark:border-[#1b2e4b]">
                         <div class="border-b border-[#e0e6ed] dark:border-[#1b2e4b] px-4 py-2.5">Cras justo odio</div>
@@ -48,18 +47,17 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
             <!-- Links -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Links</h5>
+            <Panel title="Links">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code2')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5">
                     <div class="flex flex-col rounded-md border border-[#e0e6ed] dark:border-[#1b2e4b]">
                         <a href="javascript:;" class="border-b border-[#e0e6ed] dark:border-[#1b2e4b] px-4 py-2.5 hover:bg-[#eee] dark:hover:bg-[#eee]/10"
@@ -110,18 +108,17 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
             <!-- Icons -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Icons</h5>
+            <Panel title="Icons">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code3')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5">
                     <div class="flex flex-col rounded-md border border-[#e0e6ed] dark:border-[#1b2e4b]">
                         <div class="flex border-b border-[#e0e6ed] dark:border-[#1b2e4b] px-4 py-2.5 hover:bg-[#eee] dark:hover:bg-[#eee]/10">
@@ -208,18 +205,17 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
             <!-- Images -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Images</h5>
+            <Panel title="Images">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code4')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5">
                     <div class="flex flex-col rounded-md border border-[#e0e6ed] dark:border-[#1b2e4b]">
                         <div class="flex border-b border-[#e0e6ed] dark:border-[#1b2e4b] px-4 py-2.5 hover:bg-[#eee] dark:hover:bg-[#eee]/10">
@@ -306,18 +302,17 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
             <!-- Task -->
-            <div class="panel">
-                <div class="flex items-center justify-between mb-5">
-                    <h5 class="font-semibold text-lg dark:text-white-light">Task</h5>
+            <Panel title="Task">
+                <template #actions>
                     <a class="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" href="javascript:;" @click="toggleCode('code5')">
                         <span class="flex items-center">
                             <icon-code class="me-2" />
                             Code
                         </span>
                     </a>
-                </div>
+                </template>
                 <div class="mb-5">
                     <div class="flex flex-col rounded-md border border-[#e0e6ed] dark:border-[#1b2e4b]">
                         <div
@@ -393,12 +388,13 @@
                         >
                     </highlight>
                 </template>
-            </div>
+            </Panel>
         </div>
     </div>
 </template>
 <script lang="ts" setup>
     import highlight from '@/components/plugins/highlight.vue';
+    import Panel from '@/components/Panel.vue';
     import codePreview from '@/composables/codePreview';
     import { useMeta } from '@/composables/use-meta';
 
